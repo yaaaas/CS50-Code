@@ -1,0 +1,43 @@
+---- objective c -----
+#include <stdio.h>
+#include <cs50.h>
+
+
+int h;
+int main(void){
+    printf("Height: ");
+    h = get_int();
+    
+    
+    while(h < 0 || h > 23){
+         printf("Height: ");
+         h = get_int();
+         
+    }
+    
+    for(int i = 0; i < h ; i ++){
+        for(int s = 0; s < h - i - 1; s++  ){
+            printf(" ");    
+        }
+        
+        for(int hash = 0; hash < i + 2 ; hash++){
+            printf("#");
+        }
+        
+        printf("\n");
+        
+    }
+}
+
+---- Python ------
+
+print('Height: ', end='');
+h = int(input());
+
+while(h<0 or h > 24):
+  print("That is an invalid input")
+  print('Height: ', end='');
+  h = int(input());
+
+for i in range(h):
+    print(" "*(h-i)+"#"*(i+1));
